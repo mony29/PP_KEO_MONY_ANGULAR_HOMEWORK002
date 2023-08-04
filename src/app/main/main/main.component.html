@@ -1,0 +1,11 @@
+
+
+<div class="flex space-x-10 mt-10 mx-24">
+    <app-sidebar (sendData)="MainMethod($event)" class="w-1/5"></app-sidebar>
+    <app-content [getFromMainData]="receiveDataFromSidebar" class="w-4/5 border-2 rounded-lg"></app-content>
+</div>
+
+
+
+
+
