@@ -5,11 +5,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PipePipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]) {
-    
+  transform(subject_list: any[], field: string): any[] {
+    return subject_list.sort((a, b) => {
+      if (a[field] < b[field]) {
+        return -1;
+      }
+      else if (a[field] > b[field]) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    })
   }
-  // transform(subject_list : any): any {
-  //   return subject_list.sort((a,b) => a.subjectName.localeCompare(b.subjectName));
-  // }
-
 }
+
+
+

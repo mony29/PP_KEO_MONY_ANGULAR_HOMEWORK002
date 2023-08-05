@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
+  @Output() sendData = new EventEmitter<{ subjectName: string, description: string, thumbnail: string }[]>();
 
 
   subject_list: { subjectName: string, description: string, thumbnail: string }[] = [{
@@ -41,7 +42,6 @@ export class SidebarComponent {
   },
   ]
 
-  @Output() sendData = new EventEmitter<{ subjectName: string, description: string, thumbnail: string }[]>();
 
   sendDataToMain(subjectName : any){
     this.sendData.emit(subjectName);

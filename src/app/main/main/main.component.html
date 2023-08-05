@@ -1,11 +1,30 @@
+<ng-template [appLoginLogout]="isLoggedIn">
+    <div class="flex items-center justify-center h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div class="text-center">
+            <span class="text-white text-2xl">
+                <p>Welcome to Angular New Homework!</p>
+                <p>Please login to see the content inside.</p>
+            </span>
+            <button (click)="isLoggedIn = !isLoggedIn"
+                class="mt-4 bg-blue-500 text-white px-3 text-center py-2 rounded-md w-24">
+                Login
+            </button>
+        </div>
+    </div>
+</ng-template>
 
 
-<div class="flex space-x-10 mt-10 mx-24">
-    <app-sidebar (sendData)="MainMethod($event)" class="w-1/5"></app-sidebar>
-    <app-content [getFromMainData]="receiveDataFromSidebar" class="w-4/5 border-2 rounded-lg"></app-content>
-</div>
-
-
-
-
-
+<ng-template [appLoginLogout]="!isLoggedIn">
+    <div class="flex space-x-10 mt-10 mx-24">
+        <div class="w-1/5">
+            <app-sidebar (sendData)="MainMethod($event)"></app-sidebar>
+            <div>
+                <button (click)="isLoggedIn = !isLoggedIn"
+                    class="bg-red-500 text-white px-3 text-center py-2 mt-4 rounded-md w-24">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <app-content [getFromMainData]="receiveDataFromSidebar" class="w-4/5 border-2 rounded-lg"></app-content>
+    </div>
+</ng-template>

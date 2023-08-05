@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main/main.component';
 import { ContentComponent } from './content/content/content.component';
 import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
-import { LoginLogoutDirective } from './login-logout/login-logout.directive';
 import { PipePipe } from './pipe/pipe.pipe';
+import { LoginLogoutDirective } from './login-logout.directive';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,8 @@ import { PipePipe } from './pipe/pipe.pipe';
     MainComponent,
     ContentComponent,
     SidebarComponent,
-    LoginLogoutDirective,
-    PipePipe
+    PipePipe,
+    LoginLogoutDirective
   ],
   imports: [
     BrowserModule

@@ -9,6 +9,4 @@ export class ContentComponent {
 
   @Input() getFromMainData : any;
 
-
-
 }

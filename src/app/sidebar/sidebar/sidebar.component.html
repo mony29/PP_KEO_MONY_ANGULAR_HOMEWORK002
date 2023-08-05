@@ -3,21 +3,14 @@
 <div class="border-2 rounded-lg p-5">
     <h2 class="text-xl font-bold ml-2">My Favorite Subjects</h2>
     <ng-container *ngFor="let subject of subject_list">
-        <!-- <div> -->
-            <!-- <div> -->
-                <button (click)="sendDataToMain(subject)" [ngClass]="{
-                'bg-slate-200 rounded-lg p-2 m-2 w-52' : true }">
-
+                <button 
+                (click)="sendDataToMain(subject)" 
+                [ngClass]="{
+                'bg-slate-200 p-2 m-2 w-52' : true }">
                     <div class="flex gap-2">
                         <img class="w-6 h-6" [src]="subject.thumbnail">
                         {{ subject.subjectName}}
                     </div>
-                </button>
-            <!-- </div> -->
-        <!-- </div> -->
+                </button>         
     </ng-container>
-</div>
-
-<div class="bg-red-500 text-white px-3 text-center py-2 mt-4 rounded-lg w-24">
-    <button>Logout</button>
 </div>

@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class MainComponent {
 
   myData: { subjectName: string, description: string, thumbnail: string }[] = [];
+ 
+  isLoggedIn : boolean = false;
 
   receiveDataFromSidebar: any = {
     subjectName: 'Angular',
