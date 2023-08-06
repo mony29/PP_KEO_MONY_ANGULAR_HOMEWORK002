@@ -8,7 +8,8 @@
                 [ngClass]="{
                 'bg-slate-200 p-2 m-2 w-52' : true }">
                     <div class="flex gap-2">
-                        <img class="w-6 h-6" [src]="subject.thumbnail">
+                        <!-- <img class="w-6 h-6" [src]="subject.thumbnail"> -->
+                        <img class="w-6 h-6" src="../../../assets/images/{{subject.thumbnail}}" alt="">
                         {{ subject.subjectName}}
                     </div>
                 </button>         

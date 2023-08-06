@@ -15,7 +15,8 @@ export class MainComponent {
     subjectName: 'Angular',
     description: `Angular is an open framework and
     platform for creating Single Page Applications, written in TypeScript and supported and developed by Google.`,
-    thumbnail: 'assets/images/angular.png'
+    // thumbnail: 'aassets/images/angular.png'
+    thumbnail : '../../../assets/images/angular.png'
   };
 
   MainMethod(data: any) {
